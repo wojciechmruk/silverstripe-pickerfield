@@ -1,4 +1,10 @@
 <?php
+
+namespace TheWebmen\PickerField\Controllers;
+use SilverStripe\Control\PjaxResponseNegotiator;
+use SilverStripe\Forms\GridField\GridFieldDetailForm_ItemRequest;
+use SilverStripe\GraphQL\Controller;
+
 /**
  * A custom grid field request handler that allows interacting with form fields when adding records.
  */
@@ -10,7 +16,7 @@ class PickerFieldEditHandler extends GridFieldDetailForm_ItemRequest {
 	     * modelled after doSave method on GridFieldDetailForm_ItemRequest
 	     */
 	    if(!$this->record->canEdit()) {
-	        return $controller->httpError(403);
+	        return $form->controller->httpError(403);
 	    }
 
 	    if (isset($data['ClassName']) && $data['ClassName'] != $this->record->ClassName) {

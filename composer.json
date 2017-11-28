@@ -1,28 +1,34 @@
 {
-	"name": "briceburg/silverstripe-pickerfield",
-	"description": "GridField based management of has_one , has_many , and many_many relationship selection",
-	"type": "silverstripe-module",
-	"homepage": "https://github.com/briceburg/silverstripe-pickerfield",
-	"keywords": ["silverstripe", "gridfield", "has_one"],
-	"license": "BSD-3-Clause",
-	"authors": [
-		{
-			"name": "Brice Burgess",
-			"email": "brice@digome.com"
-		}
-	],
-	"support": {
-		"issues": "https://github.com/briceburg/silverstripe-pickerfield/issues"
-	},
-	"require": {
-	  "silverstripe/framework": "~3.0",
-		"silverstripe-australia/gridfieldextensions": "*"
-	},
-	"extra": {
-		"installer-name": "pickerfield",
-		"screenshots": [
-			"docs/screenshots/pickerfield.png",
-			"docs/screenshots/add-existing-search.png"
-		]
-	}
+    "name": "thewebmen/silverstripe-pickerfield",
+    "description": "GridField based management of has_one , has_many , and many_many relationship selection",
+    "type": "silverstripe-vendormodule",
+    "homepage": "https://github.com/thewebmen/silverstripe-pickerfield",
+    "keywords": [
+        "silverstripe",
+        "gridfield",
+        "has_one"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Michel van der Steege",
+            "email": "michel@thewebmen.com"
+        }
+    ],
+    "require": {
+        "silverstripe/framework": "~4.0",
+        "symbiote/silverstripe-gridfieldextensions": "3.0.x-dev"
+    },
+    "extra": {
+        "installer-name": "silverstripe-pickerfield",
+        "screenshots": [
+            "docs/screenshots/pickerfield.png",
+            "docs/screenshots/add-existing-search.png"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "TheWebmen\\PickerField\\": "src/"
+        }
+    }
 }

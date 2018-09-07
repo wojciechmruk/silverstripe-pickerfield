@@ -35,7 +35,7 @@ class PickerField extends GridField {
 			new GridFieldDataColumns(),
 			new GridFieldTitleHeader(),
 			new GridFieldPaginator(),
-			new PickerFieldAddExistingSearchButton(),
+			new PickerFieldAddExistingSearchButton('buttons-before-left'),
 			new PickerFieldDeleteAction()
 		);
 
@@ -107,7 +107,7 @@ class PickerField extends GridField {
 	public function enableCreate($button_title = null) {
 	    $this->addDetailForm();
 
-	    $button = new GridFieldAddNewButton();
+	    $button = new GridFieldAddNewButton('buttons-before-left');
 	    if($button_title) $button->setButtonName($button_title);
 
 	    $this->config->addComponent($button);
